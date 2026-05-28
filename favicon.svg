@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="#0a0514"/>
+  <!-- "4K" text rendered as paths -->
+  <!-- "4" -->
+  <text x="4" y="46" font-family="'Arial Black', sans-serif" font-weight="900" font-size="30" fill="url(#g1)" filter="url(#glow)">4K</text>
+  <!-- Underline accent bar -->
+  <rect x="4" y="50" width="56" height="3" rx="1.5" fill="url(#g1)" opacity="0.6"/>
+</svg>

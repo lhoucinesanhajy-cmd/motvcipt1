@@ -1,0 +1,60 @@
+# =========================================================
+# MOATV PRO — Robots.txt
+# Domain  : https://moatvpro.us
+# Generated: 2026-05-28
+# =========================================================
+
+# ---------------------------------------------------------
+# Primary Search Engine Bots
+# ---------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*?*
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*?*
+
+# ---------------------------------------------------------
+# AI / LLM Bots (Allowed for Brand Visibility)
+# ---------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# ---------------------------------------------------------
+# Global Fallback
+# ---------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*?*
+Disallow: /*.pdf$
+Disallow: /*.json$
+
+# ---------------------------------------------------------
+# Sitemaps
+# ---------------------------------------------------------
+Sitemap: https://moatvpro.us/sitemap.xml

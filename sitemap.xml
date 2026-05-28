@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  =========================================================
+  MOATV PRO — XML Sitemap
+  Domain  : https://moatvpro.us
+  Generated: 2026-05-28
+  Protocol : https://www.sitemaps.org/protocol.html
+  Validated for: Google Search Console · Bing Webmaster Tools
+  =========================================================
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- =====================================================
+       CORE PAGES
+       Priority tier: Homepage → Main landing pages
+  ====================================================== -->
+
+  <!-- Homepage — Updated daily, highest authority -->
+  <url>
+    <loc>https://moatvpro.us/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- =====================================================
+       PRIMARY SEO LANDING PAGES
+       High-value IPTV keyword targets for US market
+  ====================================================== -->
+
+  <!-- IPTV USA — #1 commercial landing page -->
+  <url>
+    <loc>https://moatvpro.us/iptv-usa</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
+  </url>
+
+  <!-- 4K IPTV — Premium quality differentiator -->
+  <url>
+    <loc>https://moatvpro.us/4k-iptv</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Sports IPTV — High-traffic, high-intent category -->
+  <url>
+    <loc>https://moatvpro.us/sports-iptv</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- =====================================================
+       LIVE SPORTS STREAMING PAGES
+       Event-driven, high search volume — US audience
+  ====================================================== -->
+
+  <!-- NBA Streaming -->
+  <url>
+    <loc>https://moatvpro.us/nba-streaming</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <!-- NFL Streaming -->
+  <url>
+    <loc>https://moatvpro.us/nfl-streaming</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <!-- UFC PPV Streaming -->
+  <url>
+    <loc>https://moatvpro.us/ufc-streaming</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- =====================================================
+       DEVICE & PLATFORM PAGES
+       Device-specific IPTV landing pages
+  ====================================================== -->
+
+  <!-- Firestick IPTV -->
+  <url>
+    <loc>https://moatvpro.us/firestick-iptv</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- =====================================================
+       CONTENT CATEGORY PAGES
+       On-demand entertainment discovery
+  ====================================================== -->
+
+  <!-- Movies & Series -->
+  <url>
+    <loc>https://moatvpro.us/movies-series</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- =====================================================
+       CONVERSION & TRUST PAGES
+       High commercial intent — pricing, support
+  ====================================================== -->
+
+  <!-- Pricing — Key conversion page -->
+  <url>
+    <loc>https://moatvpro.us/pricing</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- FAQ — Trust signal, reduces bounce, targets long-tail queries -->
+  <url>
+    <loc>https://moatvpro.us/faq</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Contact — Brand trust & local SEO signal -->
+  <url>
+    <loc>https://moatvpro.us/contact</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- =====================================================
+       BLOG — Content marketing hub
+       Weekly updates for fresh crawl signals
+  ====================================================== -->
+
+  <!-- Blog Index — Crawled frequently for new posts -->
+  <url>
+    <loc>https://moatvpro.us/blog</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>

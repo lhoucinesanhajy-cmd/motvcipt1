@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +27,12 @@
         "@id": "https://moatvpro.us/#organization",
         "name": "MoaTV",
         "url": "https://moatvpro.us/",
-        "logo": "https://moatvpro.us/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://moatvpro.us/images/logo.png",
+          "width": 200,
+          "height": 60
+        },
         "description": "MoaTV is a Premium IPTV Subscription Service targeting users across Europe, the USA, and the UK.",
         "sameAs": []
       },
@@ -35,10 +40,15 @@
         "@type": "Product",
         "@id": "https://moatvpro.us/#product",
         "name": "MoaTV Premium IPTV Subscription",
-        "image": "https://moatv.us/assets/smart-tv-iptv-preview.jpg",
+        "image": [
+          "https://moatvpro.us/images/moatv-iptv-preview.jpg",
+          "https://moatvpro.us/images/logo.png"
+        ],
         "description": "Experience premium 4K/UHD IPTV streaming with MoaTV. Get access to 55,000+ live channels and a daily updated VOD library of 90,000+ movies and series. Buffer-free streaming with a 24-hour free trial.",
         "brand": {
-          "@id": "https://moatvpro.us/#organization"
+          "@type": "Brand",
+          "@id": "https://moatvpro.us/#brand",
+          "name": "MoaTV"
         },
         "offers": {
           "@type": "Offer",
@@ -47,8 +57,53 @@
           "price": "14.99",
           "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
           "seller": {
-            "@id": "https://moatvpro.us/#organization"
+            "@type": "Organization",
+            "@id": "https://moatvpro.us/#organization",
+            "name": "MoaTV"
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "@id": "https://moatvpro.us/#return-policy",
+            "name": "MoaTV Digital Service Refund Policy",
+            "applicableCountry": ["US", "GB", "FR", "DE", "ES", "IT", "NL", "BE", "CA", "AU"],
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn",
+            "refundType": "https://schema.org/FullRefund",
+            "description": "As a digital subscription service, MoaTV offers a 7-day satisfaction refund. Contact support within 7 days of purchase for a full refund. No physical return is required."
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "@id": "https://moatvpro.us/#shipping",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0.00",
+              "currency": "USD"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": ["US", "GB", "FR", "DE", "ES", "IT", "NL", "BE", "CA", "AU"]
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 0,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 0,
+                "unitCode": "DAY"
+              }
+            },
+            "doesNotShip": false,
+            "description": "This is a 100% digital subscription service. Access credentials are delivered instantly via email upon payment confirmation. No physical shipping applies."
           }
         },
         "aggregateRating": {

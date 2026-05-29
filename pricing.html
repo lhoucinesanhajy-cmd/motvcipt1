@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans — MoaTv Premium IPTV Service USA</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='yellow'/%3E%3Ctext x='50' y='54' font-family='sans-serif' font-weight='bold' font-size='26' fill='black' text-anchor='middle' dominant-baseline='middle'%3EMoaTV%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="View MoaTv IPTV pricing plans. Choose from 1-month, 3-month, 6-month, or 12-month subscriptions. All plans include 55,000+ live channels and 90,000+ movies in 4K.">
+  <meta name="keywords" content="IPTV pricing, IPTV subscription plans, best IPTV price USA, MoaTv plans 2026">
+  <link rel="canonical" href="https://moatv.us/pricing.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false } }</script>
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════ */
+    :root {
+      --cyan:   #06b6d4;
+      --cyan2:  #00f5ff;
+      --green:  #00ff88;
+      --dark:   #000000;
+      --dark2:  #050505;
+      --dark3:  #0a0a0a;
+      --zinc:   #18181b;
+      --zinc2:  #27272a;
+      --border: rgba(6,182,212,0.14);
+      --border2:rgba(6,182,212,0.28);
+      --text:   #c8e8f0;
+      --white:  #ffffff;
+      --glow:   rgba(6,182,212,0.18);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ═══════════════════════════════════════════════
+       NAVBAR
+    ═══════════════════════════════════════════════ */
+    #main-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 68px;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    #main-nav.scrolled { background: rgba(0,0,0,0.96); }
+
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.9rem; letter-spacing: 3px;
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none; align-items: center;
+    }
+    .nav-links a {
+      color: rgba(200,232,240,0.62);
+      text-decoration: none; font-weight: 600;
+      font-size: 0.8rem; letter-spacing: 1.8px;
+      text-transform: uppercase;
+      position: relative; padding-bottom: 4px;
+      transition: color 0.25s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      border-radius: 2px; transition: width 0.3s ease;
+    }
+    .nav-links a:hover, .nav-links a.nav-active { color: var(--cyan); }
+    .nav-links a.nav-active::after, .nav-links a:hover::after { width: 100%; }
+
+    .btn-nav-trial {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+      color: #000; font-family: 'Exo 2', sans-serif;
+      font-weight: 900; font-size: 0.78rem; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none;
+      padding: 9px 20px; border: none; cursor: pointer;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      transition: opacity 0.25s, transform 0.2s; flex-shrink: 0;
+    }
+    .btn-nav-trial:hover { opacity: 0.88; transform: scale(1.04); }
+
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 6px;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--cyan); border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-mobile-drawer {
+      display: none; flex-direction: column; gap: 0;
+      position: fixed; top: 68px; left: 0; right: 0;
+      background: rgba(0,0,0,0.97); border-bottom: 1px solid var(--border);
+      padding: 1rem 5%; z-index: 999;
+    }
+    .nav-mobile-drawer.open { display: flex; }
+    .nav-mobile-drawer a {
+      color: rgba(200,232,240,0.7); text-decoration: none;
+      font-weight: 600; font-size: 0.9rem; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.2s;
+    }
+    .nav-mobile-drawer a:last-child { border-bottom: none; }
+    .nav-mobile-drawer a:hover, .nav-mobile-drawer a.nav-active { color: var(--cyan); }
+    .nav-mobile-drawer .btn-nav-trial {
+      margin-top: 1rem; width: fit-content;
+    }
+
+    /* ═══════════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════════ */
+    .btn-trial {
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+      color: #000; font-family: 'Exo 2', sans-serif;
+      font-weight: 900; font-size: 0.88rem; letter-spacing: 2px;
+      text-transform: uppercase; padding: 13px 30px;
+      border: none; cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+    .btn-trial:hover {
+      opacity: 0.88; transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(6,182,212,0.4);
+    }
+    .btn-outline {
+      border: 1px solid var(--border2); color: var(--text);
+      padding: 13px 28px; font-family: 'Exo 2', sans-serif;
+      font-weight: 700; font-size: 0.88rem; letter-spacing: 1px;
+      background: transparent; cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    .btn-plan {
+      width: 100%; padding: 13px;
+      font-family: 'Exo 2', sans-serif; font-weight: 900;
+      font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase;
+      border: 1px solid var(--cyan); background: transparent; color: var(--cyan);
+      cursor: pointer; text-align: center; text-decoration: none; display: block;
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+      transition: background 0.28s, color 0.28s, box-shadow 0.28s, transform 0.22s;
+    }
+    .btn-plan:hover {
+      background: var(--cyan); color: #000;
+      box-shadow: 0 0 24px rgba(6,182,212,0.35);
+      transform: translateY(-2px);
+    }
+    .btn-plan.featured-btn {
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+      color: #000; border: none;
+    }
+    .btn-plan.featured-btn:hover { opacity: 0.88; }
+
+    /* ═══════════════════════════════════════════════
+       TYPOGRAPHY
+    ═══════════════════════════════════════════════ */
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--white); line-height: 1; margin-bottom: 1.5rem;
+    }
+    .section-tag {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 5px;
+      text-transform: uppercase; color: var(--cyan); margin-bottom: 0.9rem;
+    }
+    .section-desc {
+      font-size: 1rem; line-height: 1.8; max-width: 560px;
+      color: rgba(200,232,240,0.65);
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE HERO
+    ═══════════════════════════════════════════════ */
+    .page-hero {
+      padding-top: 68px;
+      background: var(--dark2);
+      border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; top: -40%; right: -10%;
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(6,182,212,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero-inner {
+      padding: 70px 5% 60px;
+      position: relative; z-index: 1;
+    }
+    .page-hero-label {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 5px;
+      text-transform: uppercase; color: var(--cyan); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .page-hero-label::before {
+      content: ''; display: inline-block; width: 28px; height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--green)); border-radius: 2px;
+    }
+    .page-hero-inner h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4.5rem);
+      color: var(--white); letter-spacing: 2px; margin-bottom: 1rem; line-height: 1.02;
+    }
+    .page-hero-inner h1 .accent {
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-hero-inner p {
+      font-size: 1rem; line-height: 1.75;
+      color: rgba(200,232,240,0.55); max-width: 580px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PRICING
+    ═══════════════════════════════════════════════ */
+    #pricing-page { background: var(--dark2); padding: 70px 5% 100px; }
+    .pricing-header { text-align: center; margin-bottom: 3.5rem; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+    }
+    .plan-card {
+      background: var(--dark); border: 1px solid var(--border);
+      padding: 2.5rem 2rem; position: relative;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .plan-card:hover {
+      border-color: var(--cyan); transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(6,182,212,0.12), 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .plan-card.featured {
+      border-color: var(--cyan);
+      background: rgba(6,182,212,0.04);
+    }
+    .plan-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      color: #000; font-weight: 900; font-size: 0.68rem;
+      letter-spacing: 2px; text-transform: uppercase; padding: 4px 16px;
+      white-space: nowrap;
+    }
+    .plan-name {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem;
+      letter-spacing: 3px; color: var(--cyan); margin-bottom: 1rem; text-transform: uppercase;
+    }
+    .plan-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 0.5rem; }
+    .plan-price .amount {
+      font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; line-height: 1; color: var(--white);
+    }
+    .plan-price .currency { font-size: 1.2rem; color: var(--text); }
+    .plan-price .period { font-size: 0.85rem; color: rgba(200,232,240,0.45); margin-left: 2px; }
+    .plan-desc {
+      font-size: 0.82rem; color: rgba(200,232,240,0.45);
+      margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
+    }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
+    .plan-features li {
+      font-size: 0.88rem; display: flex; align-items: center; gap: 10px; color: var(--text);
+    }
+    .plan-features li .check {
+      width: 18px; height: 18px; background: rgba(0,255,136,0.08);
+      border: 1px solid rgba(0,255,136,0.35); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      color: var(--green);
+    }
+    .plan-features li .check svg { width: 11px; height: 11px; }
+
+    /* Free Trial Callout */
+    .free-trial-callout {
+      max-width: 1100px; margin: 0 auto 2.5rem;
+    }
+    .free-trial-callout-inner {
+      background: rgba(6,182,212,0.05); border: 1px solid rgba(6,182,212,0.2);
+      border-radius: 12px; padding: 1.25rem 2rem;
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center; text-align: center;
+    }
+    .free-trial-callout-inner span {
+      font-family: 'Exo 2', sans-serif; font-size: 0.95rem; color: rgba(200,232,240,0.75);
+    }
+
+    /* ═══════════════════════════════════════════════
+       FAQ STRIP
+    ═══════════════════════════════════════════════ */
+    .faq-strip {
+      background: var(--dark); padding: 80px 5%;
+    }
+    .faq-strip-header { text-align: center; margin-bottom: 3rem; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 3px; }
+    .faq-item {
+      background: var(--zinc); border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden; transition: border-color 0.3s;
+    }
+    .faq-item.open { border-color: rgba(6,182,212,0.35); }
+    .faq-q {
+      width: 100%; background: none; border: none; color: var(--white);
+      font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 0.95rem;
+      text-align: left; padding: 1.25rem 1.5rem; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      transition: color 0.3s;
+    }
+    .faq-q:hover { color: var(--cyan); }
+    .faq-arrow-icon {
+      flex-shrink: 0; width: 20px; height: 20px; color: var(--cyan);
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .faq-item.open .faq-arrow-icon { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.45s ease, padding 0.3s;
+      font-size: 0.88rem; line-height: 1.8; color: rgba(200,232,240,0.6);
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.4rem; }
+
+    /* ═══════════════════════════════════════════════
+       CTA STRIP
+    ═══════════════════════════════════════════════ */
+    .cta-strip {
+      background: var(--dark2); padding: 90px 5%;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-strip::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(6,182,212,0.06) 0%, transparent 70%);
+    }
+    .cta-strip h2 { margin-bottom: 1rem; position: relative; z-index: 1; }
+    .cta-strip p {
+      font-size: 1rem; color: rgba(200,232,240,0.58);
+      margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto;
+      position: relative; z-index: 1;
+    }
+    .cta-strip .btn-trial { position: relative; z-index: 1; }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    footer {
+      background: var(--dark); border-top: 1px solid var(--border);
+      padding: 3rem 5%; display: flex; flex-wrap: wrap;
+      gap: 2rem; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: rgba(200,232,240,0.38); text-decoration: none;
+      font-size: 0.82rem; transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--cyan); }
+    .footer-copy { font-size: 0.76rem; color: rgba(200,232,240,0.22); }
+
+    /* ═══════════════════════════════════════════════
+       WHATSAPP WIDGET
+    ═══════════════════════════════════════════════ */
+    .whatsapp-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 1100;
+      width: 60px; height: 60px; background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45); text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .whatsapp-btn:hover { transform: scale(1.12); box-shadow: 0 8px 36px rgba(37,211,102,0.65); }
+    .whatsapp-pulse {
+      position: absolute; width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(37,211,102,0.4); animation: waPulse 2s ease-out infinite;
+      pointer-events: none;
+    }
+    .wa-tip {
+      position: absolute; right: 72px; bottom: 50%; transform: translateY(50%);
+      background: var(--zinc); color: var(--white);
+      font-size: 0.76rem; font-weight: 600; white-space: nowrap;
+      padding: 0.45rem 0.9rem; border-radius: 8px;
+      border: 1px solid var(--border); font-family: 'Exo 2', sans-serif;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.25s;
+    }
+    .whatsapp-btn:hover .wa-tip { opacity: 1; }
+
+    /* ═══════════════════════════════════════════════
+       ANIMATIONS
+    ═══════════════════════════════════════════════ */
+    @keyframes waPulse { 0% { transform: scale(1); opacity: 0.75; } 70%,100% { transform: scale(1.7); opacity: 0; } }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .nav-links { display: none !important; }
+      .nav-hamburger { display: flex; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ╔═══════════════════════════════════════════╗ -->
+  <!-- ║             NAVIGATION BAR               ║ -->
+  <!-- ╚═══════════════════════════════════════════╝ -->
+  <nav id="main-nav">
+    <a href="index.html" class="logo" title="MoaTv — Home">MoaTv</a>
+
+    <ul class="nav-links" id="nav-links-desktop">
+      <li><a href="index.html"   id="nav-home">Home</a></li>
+      <li><a href="pricing.html" id="nav-pricing" class="nav-active">Pricing</a></li>
+      <li><a href="faq.html"     id="nav-faq">FAQ</a></li>
+      <li><a href="blog.html"    id="nav-blog">Blog</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+    </ul>
+
+    <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20would%20like%20to%20request%20a%20Free%20Trial%20to%20test%20the%20channels%20before%20subscribing."
+       target="_blank" rel="noopener" class="btn-nav-trial">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Free Trial
+    </a>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-mobile-drawer" id="nav-mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="pricing.html" class="nav-active">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20would%20like%20to%20request%20a%20Free%20Trial%20to%20test%20the%20channels%20before%20subscribing."
+       target="_blank" rel="noopener" class="btn-nav-trial" style="margin-top:1rem;width:fit-content;">
+      Free Trial
+    </a>
+  </div>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">MoaTv Subscription Plans</div>
+      <h1>Simple, <span class="accent">Transparent</span> Pricing</h1>
+      <p>Choose the plan that works for you. All plans include 55,000+ live channels, 90,000+ movies &amp; series in 4K. Cancel anytime.</p>
+    </div>
+  </div>
+
+  <!-- ── PRICING SECTION ── -->
+  <section id="pricing-page">
+    <div class="pricing-header">
+      <div class="section-tag">Simple Pricing</div>
+      <h2>Choose Your Plan</h2>
+      <p class="section-desc" style="margin:0 auto;text-align:center;">Cancel anytime. No hidden fees. Start with a free trial today.</p>
+    </div>
+
+    <!-- Free Trial Callout -->
+    <div class="free-trial-callout">
+      <div class="free-trial-callout-inner">
+        <span>Not ready to commit? Test the service completely free first.</span>
+        <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20would%20like%20to%20request%20a%20Free%20Trial%20to%20test%20the%20channels%20before%20subscribing."
+           target="_blank" rel="noopener" class="btn-trial" style="font-size:0.82rem;padding:9px 22px;flex-shrink:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Get Free Trial
+        </a>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- 1 Month -->
+      <div class="plan-card">
+        <div class="plan-name">1 Month</div>
+        <div class="plan-price"><span class="currency">$</span><span class="amount">14</span><span class="period">/mo</span></div>
+        <div class="plan-desc">Perfect for trying out the service</div>
+        <ul class="plan-features">
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>55,000+ Live Channels</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>90,000+ Movies &amp; Series</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>4K Ultra HD Quality</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 Connection</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>24/7 Support</li>
+        </ul>
+        <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20am%20interested%20in%20subscribing%20to%20the%201-Month%20Premium%20Plan.%20Please%20send%20me%20the%20payment%20details." target="_blank" rel="noopener" class="btn-plan">Get Started</a>
+      </div>
+
+      <!-- 3 Months -->
+      <div class="plan-card">
+        <div class="plan-name">3 Months</div>
+        <div class="plan-price"><span class="currency">$</span><span class="amount">29</span><span class="period">/3mo</span></div>
+        <div class="plan-desc">Great balance of value &amp; flexibility</div>
+        <ul class="plan-features">
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>55,000+ Live Channels</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>90,000+ Movies &amp; Series</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>4K Ultra HD Quality</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 Connections</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>24/7 Support</li>
+        </ul>
+        <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20am%20interested%20in%20the%203-Months%20Premium%20Plan.%20Please%20send%20me%20the%20payment%20details." target="_blank" rel="noopener" class="btn-plan">Get Started</a>
+      </div>
+
+      <!-- 6 Months — Most Popular -->
+      <div class="plan-card featured">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-name">6 Months</div>
+        <div class="plan-price"><span class="currency">$</span><span class="amount">49</span><span class="period">/6mo</span></div>
+        <div class="plan-desc">Best value for regular users</div>
+        <ul class="plan-features">
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>55,000+ Live Channels</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>90,000+ Movies &amp; Series</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>4K Ultra HD Quality</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 Connections</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>24/7 Priority Support</li>
+        </ul>
+        <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20am%20interested%20in%20the%206-Months%20Premium%20Plan.%20Please%20send%20me%20the%20payment%20details." target="_blank" rel="noopener" class="btn-plan featured-btn">Get Started</a>
+      </div>
+
+      <!-- 12 Months -->
+      <div class="plan-card">
+        <div class="plan-name">12 Months</div>
+        <div class="plan-price"><span class="currency">$</span><span class="amount">79</span><span class="period">/yr</span></div>
+        <div class="plan-desc">Maximum savings for the whole year</div>
+        <ul class="plan-features">
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>55,000+ Live Channels</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>90,000+ Movies &amp; Series</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>4K Ultra HD Quality</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>3 Connections</li>
+          <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l2.8 2.8 5-5.6" stroke="#00ff88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>24/7 VIP Support</li>
+        </ul>
+        <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20want%20to%20subscribe%20to%20the%201-Year%20Premium%20Plan.%20Please%20send%20me%20the%20payment%20details." target="_blank" rel="noopener" class="btn-plan">Get Started</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ STRIP ── -->
+  <div class="faq-strip">
+    <div class="faq-strip-header">
+      <div class="section-tag">Have Questions?</div>
+      <h2>Common Questions</h2>
+      <p class="section-desc" style="margin:0 auto;text-align:center;">Can't find your answer? <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20have%20a%20question%20about%20your%20IPTV%20service." target="_blank" rel="noopener" style="color:var(--cyan);font-weight:700;">Ask us on WhatsApp</a></p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I switch plans later?<svg class="faq-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">Yes! You can upgrade or change your plan at any time. Simply contact our support team on WhatsApp and we will adjust your subscription accordingly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there a free trial available?<svg class="faq-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">Yes! We offer a free trial so you can test our service before committing. <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20would%20like%20to%20request%20a%20Free%20Trial." target="_blank" rel="noopener" style="color:var(--cyan);">Request your free trial via WhatsApp</a>.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What payment methods do you accept?<svg class="faq-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">We accept PayPal, credit/debit cards, cryptocurrency, and more. Contact our support team to find the payment method that works best for you.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How many devices can I use simultaneously?<svg class="faq-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">Depending on your plan: 1-Month supports 1 connection, 3-Month and 6-Month support 2 simultaneous connections, and the 12-Month plan supports 3 connections at once.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA STRIP ── -->
+  <div class="cta-strip">
+    <div class="section-tag" style="position:relative;z-index:1;">Get Started Today</div>
+    <h2>Ready to Cut the Cable?</h2>
+    <p>Join 30,000+ customers already streaming everything they love — in stunning 4K quality.</p>
+    <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20would%20like%20to%20request%20a%20Free%20Trial%20to%20test%20the%20channels%20before%20subscribing."
+       target="_blank" rel="noopener" class="btn-trial" style="font-size:1rem;padding:15px 38px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Start Your Free Trial
+    </a>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <a href="index.html" class="footer-logo">MoaTv</a>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 MoaTv. All rights reserved.</div>
+  </footer>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/4473475865107?text=Hello%20MoaTv%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20IPTV%20service."
+     target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-pulse"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="#fff">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.738 5.47 2.027 7.773L0 32l8.479-2.001A15.934 15.934 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.286 13.286 0 01-6.813-1.876l-.488-.29-5.035 1.188 1.23-4.899-.318-.503A13.254 13.254 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.289-9.879c-.397-.199-2.35-1.158-2.715-1.29-.365-.131-.63-.199-.896.199-.265.397-1.027 1.29-1.26 1.556-.232.265-.464.298-.861.1-.397-.199-1.676-.617-3.193-1.97-1.18-1.051-1.977-2.35-2.21-2.747-.232-.397-.025-.611.175-.809.179-.179.397-.464.596-.696.199-.232.265-.397.397-.662.132-.265.066-.497-.033-.696-.1-.199-.896-2.16-1.228-2.956-.323-.778-.651-.673-.896-.685h-.762c-.265 0-.696.1-1.061.497-.365.397-1.393 1.362-1.393 3.32 0 1.959 1.427 3.85 1.626 4.115.199.265 2.81 4.29 6.808 6.018.951.41 1.693.655 2.272.838.954.303 1.823.261 2.51.158.766-.115 2.35-.96 2.681-1.886.331-.927.331-1.72.232-1.886-.1-.166-.365-.265-.762-.464z"/>
+    </svg>
+    <span class="wa-tip">Chat with us on WhatsApp</span>
+  </a>
+
+  <script>
+    /* Navbar scroll effect */
+    window.addEventListener('scroll', function() {
+      document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    /* Mobile menu */
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('nav-mobile-drawer');
+      const btn    = document.getElementById('nav-hamburger');
+      const isOpen = drawer.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    document.addEventListener('click', function(e) {
+      const drawer = document.getElementById('nav-mobile-drawer');
+      const btn    = document.getElementById('nav-hamburger');
+      if (drawer.classList.contains('open') &&
+          !drawer.contains(e.target) &&
+          !btn.contains(e.target)) {
+        drawer.classList.remove('open');
+        btn.classList.remove('open');
+      }
+    });
+
+    /* FAQ accordion */
+    function toggleFaq(btn) {
+      const item   = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => { if (el !== item) el.classList.remove('open'); });
+      item.classList.toggle('open', !isOpen);
+    }
+  </script>
+
+</body>
+</html>
